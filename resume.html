@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        nav {
+            background-color: #3a4a58;
+            padding: 15px 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: #a8d0e6;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* 简历内容样式 */
+        .resume-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        
+        .resume-card {
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .name {
+            font-size: 32px;
+            color: #3a4a58;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: #3a4a58;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .entry {
+            margin-bottom: 20px;
+        }
+        
+        .entry-title {
+            font-weight: bold;
+            color: #3a4a58;
+            margin-bottom: 5px;
+        }
+        
+        .entry-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .entry-description {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background-color: #e8edf2;
+            color: #3a4a58;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        /* 按钮样式 */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #3a4a58, #577399);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(58, 74, 88, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 74, 88, 0.3);
+            background: linear-gradient(135deg, #465a6c, #6687b0);
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 14px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="resume.html">个人简历</a></li>
+            <li><a href="works.html">我的作品</a></li>
+            <li><a href="motto.html">座右铭</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 简历内容 -->
+    <div class="resume-container">
+        <div class="resume-card">
+            <div class="profile-header">
+                <h1 class="name">flechazo</h1>
+                <div class="title">数据科学与大数据技术专业 大三学生</div>
+                <div class="contact-info">
+                    邮箱：flechazoyang@foxmail.com | 电话：159****7644
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">教育背景</h2>
+                <div class="entry">
+                    <div class="entry-title">江西财经大学 - 数据科学与大数据技术专业</div>
+                    <div class="entry-date">2023年9月 - 至今</div>
+                    <div class="entry-description">
+                        主修课程：数据结构、计算机网络、操作系统、数据库原理、面向对象程序设计、Web前端开发等<br>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">专业技能</h2>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java基础</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">实践经历</h2>
+                <div class="entry">
+                    <div class="entry-title">校学生会技术部干事</div>
+                    <div class="entry-date">2022年3月 - 至今</div>
+                    <div class="entry-description">
+                        负责学生会官网的日常维护与更新，参与设计并开发了学生会活动报名系统，
+                        优化了页面加载速度，提升了用户体验。
+                    </div>
+                </div>
+                <div class="entry">
+                    <div class="entry-title">计算机编程社团成员</div>
+                    <div class="entry-date">2023年10月 - 至今</div>
+                    <div class="entry-description">
+                        参与每周技术分享会，与社团成员共同完成多个小型开发项目
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <a href="works.html" class="btn">查看我的作品</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>版权所有 © 2025 flechazo</p>
+    </footer>
+</body>
+</html>

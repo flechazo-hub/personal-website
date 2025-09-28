@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        nav {
+            background-color: #3a4a58;
+            padding: 15px 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: #a8d0e6;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* 作品内容样式 */
+        .works-container {
+            flex: 1;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            color: #3a4a58;
+            margin-bottom: 40px;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .work-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .work-image {
+            height: 200px;
+            background-color: #e8edf2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .work-content {
+            padding: 20px;
+        }
+        
+        .work-title {
+            font-size: 20px;
+            color: #3a4a58;
+            margin-bottom: 10px;
+        }
+        
+        .work-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background-color: #e8edf2;
+            color: #3a4a58;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+        
+        /* 按钮样式 */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #3a4a58, #577399);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(58, 74, 88, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 74, 88, 0.3);
+            background: linear-gradient(135deg, #465a6c, #6687b0);
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .button-group {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 14px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="resume.html">个人简历</a></li>
+            <li><a href="works.html">我的作品</a></li>
+            <li><a href="motto.html">座右铭</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 作品内容 -->
+    <div class="works-container">
+        <h1 class="page-title">我的作品</h1>
+        
+        <div class="works-grid">
+            <!-- 作品1 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="https://picsum.photos/id/0/600/400" alt="个人博客网站截图">
+                </div>
+                <div class="work-content">
+                    <h2 class="work-title">个人博客网站</h2>
+                    <p class="work-description">
+                        一个基于HTML、CSS和JavaScript开发的个人博客网站，支持文章发布、分类浏览和简单的评论功能。
+                        采用响应式设计，在手机和电脑上都能良好显示。
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">响应式设计</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 作品2 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="https://picsum.photos/id/180/600/400" alt="图书管理系统截图">
+                </div>
+                <div class="work-content">
+                    <h2 class="work-title">简易图书管理系统</h2>
+                    <p class="work-description">
+                        一个使用Python和MySQL开发的图书管理系统，支持图书信息的增删改查、借阅和归还功能，
+                        具有简单的用户登录和权限管理。
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <a href="motto.html" class="btn">查看我的座右铭</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>版权所有 © 2025 flechazo</p>
+    </footer>
+</body>
+</html>

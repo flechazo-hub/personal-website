@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的座右铭</title>
+    <!-- 引入Google字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        nav {
+            background-color: #3a4a58;
+            padding: 15px 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+        
+        nav a:hover {
+            color: #a8d0e6;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* 座右铭样式 */
+        .motto-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .motto-card {
+            background-color: white;
+            padding: 50px 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* 座右铭字体 - 使用书法风格字体 */
+        .motto {
+            font-size: 48px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            position: relative;
+            padding: 30px 40px;
+            font-family: 'Ma Shan Zheng', cursive;
+            color: #3a4a58;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        /* 引号装饰 */
+        .motto::before, .motto::after {
+            content: """;
+            font-size: 90px;
+            color: #e0e0e0;
+            position: absolute;
+            opacity: 0.7;
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        .motto::before {
+            top: -20px;
+            left: -10px;
+        }
+        
+        .motto::after {
+            bottom: -60px;
+            right: 10px;
+        }
+        
+        /* 解释文字样式 */
+        .explanation {
+            max-width: 600px;
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin: 30px auto 0;
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        /* 按钮样式 */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #3a4a58, #577399);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(58, 74, 88, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin-top: 40px;
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 74, 88, 0.3);
+            background: linear-gradient(135deg, #465a6c, #6687b0);
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #666;
+            font-size: 14px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #e0e0e0;
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="resume.html">个人简历</a></li>
+            <li><a href="works.html">我的作品</a></li>
+            <li><a href="motto.html">座右铭</a></li>
+        </ul>
+    </nav>
+    
+    <div class="motto-container">
+        <div class="motto-card">
+            <div class="motto">
+                千里之行，始于足下<br>
+                坚持下去，终会有所收获
+            </div>
+            <div class="explanation">
+                <p>这句话一直激励着我不断前进。无论是学习新知识，还是掌握新技能，都需要从基础做起，一步一个脚印地积累。</p>
+                <p>在编程学习的道路上，我遇到过很多困难和挑战，但正是这句座右铭提醒我，只要坚持不懈，每天进步一点点，最终一定能够实现自己的目标。</p>
+            </div>
+            <a href="index.html" class="btn">返回首页</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>版权所有 © 2025 flechazo</p>
+    </footer>
+</body>
+</html>
